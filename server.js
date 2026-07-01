@@ -21,7 +21,7 @@ app.post("/api/notes", async (req, res) => {
 })
 
 // READ
-app.post("/api/notes", async (req, res) => {
+app.get("/api/notes", async (req, res) => {
     const result = await pool.query(
         "SELECT * FROM notes ORDER BY id DESC"
     );
