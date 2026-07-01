@@ -2,10 +2,12 @@ require("dotenv").config();
 
 const express = require("express");
 const path = require("path");
+const pool = require("./db");
 
 const app = express();
 const PORT = process.env.PORT;
 
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // CREATE
